@@ -6,58 +6,43 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import static org.junit.Assert.assertEquals;
-
 @RunWith(MockitoJUnitRunner.class)
 public class BurgerTest {
-
-    Bun bun;
-    Ingredient ingredient;
 
     private final int ingredientIndexToRemove = 0;
     private final int ingredientIndexMoveFrom = 0;
     private final int ingredientIndexMoveTo = 1;
-    private final float expectedPrice = 20F;
-    private final String expectedReceipt = "This is expected receipt";
 
     @Mock
-    Burger burger;
+    private Burger burger;
+
+    @Mock
+    private Bun bun;
+
+    @Mock
+    private Ingredient ingredient;
 
     @Test
-    public void setBuns() {
+    public void setBunsTest() {
         burger.setBuns(bun);
         Mockito.verify(burger).setBuns(bun);
     }
 
     @Test
-    public void addIngredient() {
+    public void addIngredientTest() {
         burger.addIngredient(ingredient);
         Mockito.verify(burger).addIngredient(ingredient);
     }
 
     @Test
-    public void removeIngredient() {
+    public void removeIngredientTest() {
         burger.removeIngredient(ingredientIndexToRemove);
         Mockito.verify(burger).removeIngredient(ingredientIndexToRemove);
     }
 
     @Test
-    public void moveIngredient() {
+    public void moveIngredientTest() {
         burger.moveIngredient(ingredientIndexMoveFrom, ingredientIndexMoveTo);
         Mockito.verify(burger).moveIngredient(ingredientIndexMoveFrom, ingredientIndexMoveTo);
-    }
-
-    @Test
-    public void getPrice() {
-        Mockito.when(burger.getPrice()).thenReturn(20F);
-        float actualResults = burger.getPrice();
-        assertEquals(expectedPrice, actualResults, 0.001F);
-    }
-
-    @Test
-    public void getReceipt() {
-        Mockito.when(burger.getReceipt()).thenReturn(expectedReceipt);
-        String actualResult = burger.getReceipt();
-        assertEquals(actualResult, expectedReceipt);
     }
 }

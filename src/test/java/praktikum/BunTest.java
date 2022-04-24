@@ -10,7 +10,7 @@ public class BunTest {
     private final float price = 10F;
 
     @Test
-    public void testTestGetName() {
+    public void getNameReturnBunName() {
         Bun bun = new Bun(name, price);
         String actualResult = bun.getName();
 
@@ -18,7 +18,7 @@ public class BunTest {
     }
 
     @Test
-    public void testGetPrice() {
+    public void getPriceReturnBunPrice() {
         Bun bun = new Bun(name, price);
         float actualResult = bun.getPrice();
 

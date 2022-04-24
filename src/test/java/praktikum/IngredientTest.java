@@ -11,15 +11,15 @@ public class IngredientTest {
     private final float price = 10F;
 
     @Test
-    public void testGetPrice() {
+    public void getPriceReturnIngredientPrice() {
         Ingredient ingredient = new Ingredient(type, name, price);
         float actualResult = ingredient.getPrice();
 
-        assertEquals(price, actualResult);
+        assertEquals(price, actualResult, 0.00001);
     }
 
     @Test
-    public void testTestGetName() {
+    public void getNameReturnIngredientName() {
         Ingredient ingredient = new Ingredient(type, name, price);
         String actualResult = ingredient.getName();
 
@@ -27,7 +27,7 @@ public class IngredientTest {
     }
 
     @Test
-    public void testGetType() {
+    public void getTypeReturnIngredientType() {
         Ingredient ingredient = new Ingredient(type, name, price);
         IngredientType actualResult = ingredient.getType();
 
