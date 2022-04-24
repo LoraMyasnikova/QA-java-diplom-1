@@ -1,9 +1,5 @@
 package praktikum;
 
-<<<<<<< HEAD
-=======
-import org.junit.Before;
->>>>>>> origin/develop1
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -27,13 +23,6 @@ public class BurgerTest {
     @Mock
     Burger burger;
 
-<<<<<<< HEAD
-=======
-    @Before
-    public void setUp() {
-    }
-
->>>>>>> origin/develop1
     @Test
     public void setBuns() {
         burger.setBuns(bun);
