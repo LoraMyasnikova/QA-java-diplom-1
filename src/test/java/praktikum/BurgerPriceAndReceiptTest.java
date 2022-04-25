@@ -13,9 +13,9 @@ import static org.junit.Assert.assertEquals;
 public class BurgerPriceAndReceiptTest {
 
     Burger burger = new Burger();
-    private final float expectedPrice = 30F;
     private final float bunPrice = 10F;
     private final float ingredientPrice = 10F;
+    private final float expectedPrice = bunPrice * 2 + ingredientPrice;
 
     private final String expectedBunName = "black bun";
     private final String expectedIngredientName = "cutlet";
